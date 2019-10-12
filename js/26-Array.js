@@ -17,9 +17,15 @@ var lenguajes = new Array("php","js","java","C++");
 //     alert("EL usuario seleccionado es "+nombres[elemento]);
 // }
 document.write("<ul>");
-for(var i = 0; i< lenguajes.length; i++){
-    document.write("<Li>"+lenguajes[i]+"</li>");
+// for(var i = 0; i< lenguajes.length; i++){
+//     document.write("<Li>"+lenguajes[i]+"</li>");
     
-}
+// }
+
+lenguajes.forEach((elemento, indice, arr)=>{
+    console.log(arr);
+    document.write("<Li>"+indice+" "+elemento+"</li>");
+
+});
 
 document.write("</ul>");
