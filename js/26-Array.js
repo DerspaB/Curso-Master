@@ -29,3 +29,18 @@ lenguajes.forEach((elemento, indice, arr)=>{
 });
 
 document.write("</ul>");
+
+
+// Busquedas en un array
+//Metodo .find para encontrar en un array
+
+// Metodo findIndex para obtener el indice en donde se encuentra la busqueda en el array
+
+var precios = [10,20,50,80,12];
+// var busqueda = lenguajes.find( lenguaje => lenguaje == "C++");
+
+// Metodo revisa una condicicon y si el array la tiene arroja true or false
+var busqueda = precios.some( precio => precio >= 20);
+
+
+console.log(busqueda);
