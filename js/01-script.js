@@ -1,2 +1,2 @@
-// console.log("Muestra consola");
-// alert("Carpeta ubicada correctamente");
+ console.log("Muestra consola");
+ alert("Carpeta ubicada correctamente");
