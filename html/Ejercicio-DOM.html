@@ -7,24 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ejercicio DOM </title>
     <script src="../js/33-Ejercicio-DOM.js"></script>
+    <style>
+        .box{
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin: 20px;
+        }
+        .dashed{
+            border: 3px dashed black;
+            padding: 5px;
+        }
+    </style>
 </head>
-<div id="divFormulario" align="center">
+<div class="box">
     <h1>Formulario Ejercicio DOM</h1>
     <p>
-        <form id="formulario" action="" method="POST">
-            <label for="nombre">Nombre</label>
-            <input name="nombre" id="nombre" type="text" placeholder="Ingrese su Nombre">
-            <br/>
-            <label for="apellido">Apellido</label>
-            <input name="apellido" id="apellido" type="text" placeholder="Ingrese su Apellido">
-            <br/>
-            <label for="edad">Edad</label>
-            <input name="edad" id="edad" type="number" placeholder="Ingrese su Edad">
-            <br/>
+        <form id="formulario" action="" method="POST" onsubmit="return false">
+            <label for="nombre">Nombre</label><br/>
+            <input name="nombre" id="nombre" type="text" placeholder="Ingrese su Nombre"/><br/>
+            <label for="apellido">Apellido</label><br/>
+            <input name="apellido" id="apellido" type="text" placeholder="Ingrese su Apellido"/><br/>
+            <label for="edad">Edad</label><br/>
+            <input name="edad" id="edad" type="number" placeholder="Ingrese su Edad"/><br/>
             <input type="submit" value="Enviar" id="boton">
 
         </form>
     </p>
+</div>
+
+<div class="box dashed">
+    <h3>Informacion del usuario</h3>
+        <hr>
+
 </div>
 
 <body>
