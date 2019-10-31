@@ -22,6 +22,8 @@ window.addEventListener('load', () => {
     // Evento click
     boton.addEventListener('click', function() {
         cambiarColor();
+        // si estoy en un evento puedo acceder al objeto con un this
+        this.style.border = "10px solid black";
     });
 
     // Mouse over

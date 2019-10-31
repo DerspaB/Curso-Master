@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
             alert("Complete el campo Apellidos");
             return false;
         }
-        if(edad.trim() == null || edad.trim().length == 0 || !isNaN(edad)){
+        if(edad.trim() == null || edad.trim().length == 0 || isNaN(edad)){
             alert("Complete el campo edad");
             return false;
         }
