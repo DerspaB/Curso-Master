@@ -1,10 +1,27 @@
 'use strict'
  
 // Fetch y peticiones a servicios / apis rest
- var usuarios = [];
-fetch('https://jsonplaceholder.typicode.com/todos')
+
+var div_usuarios = document.querySelector('#usuarios');
+
+getUsuarios()
     .then(data => data.json())
-    .then(data =>{
-        usuarios = data;
-        console.log(usuarios);
+    .then(users =>{
+        listadoUsuarios(users.data);    
     });
+
+
+    function getUsuarios(){
+        return fetch('https://reqres.in/api/users');
+    }
+
+    function listadoUsuarios(usuarios){
+        usuarios.map((users , i)=>{
+            let nombre = document.createElement('h2');
+
+            nombre.innerHTML = i+ ". " + users.first_name + " " + users.last_name;
+
+            div_usuarios.appendChild(nombre);
+            var gif = document.querySelector('.loading').style.display = "none";
+        });
+    }
