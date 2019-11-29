@@ -15,10 +15,15 @@ getUsuarios()
     .then(data => data.json())
     .then(users => {
         mostrarJanet(users.data);
+
+        return getInfo();
+    })
+    .then(data =>{
+        console.log(data);
     });
 
 
-    function getUsuarios(){
+    function getUsuarios(){         
         return fetch('https://reqres.in/api/users');
     }
 
@@ -32,7 +37,14 @@ getUsuarios()
             apellidos: 'Robles',
             url: 'https://victorroblesweb.es'
         };
-        JSON.stringify(profesor);
+        return new Promise((resolve, reject) =>{
+            var profesor_string = JSON.stringify(profesor);
+
+            if(typeof(profesor_string) != 'string') return reject('error');
+
+            return resolve(profesor_string);
+        });
+         
     }
 
     function listadoUsuarios(usuarios){
