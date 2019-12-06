@@ -27,4 +27,17 @@ $(document).ready(function(){
 
     // Tooltip
     $(document).tooltip();
+
+    // Dialog
+    $("#lanzar-popup").click(function(){
+        $("#popup").dialog();
+    });
+
+    // datepicker
+
+    $("#calendario").datepicker();
+
+    // tabs
+
+    $("#pestanas").tabs();
 });
