@@ -110,6 +110,10 @@ if(form_name!= null && form_name != "undefined"){
 if(window.location.href.indexOf('about') > -1){
     $("#accordion").accordion();
 }
+if(window.location.href.indexOf('reloj') > -1){
+    var reloj = moment().format();
+    alert(reloj);
+}
 
 });
 
