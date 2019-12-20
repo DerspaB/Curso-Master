@@ -111,8 +111,11 @@ if(window.location.href.indexOf('about') > -1){
     $("#accordion").accordion();
 }
 if(window.location.href.indexOf('reloj') > -1){
-    var reloj = moment().format();
-    alert(reloj);
+    setInterval(function(){
+        var reloj = moment().format('h:mm:ss a');
+        $('#reloj').html(reloj);
+    }, 1000);
+    
 }
 
 });

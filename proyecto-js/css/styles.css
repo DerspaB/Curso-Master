@@ -212,3 +212,14 @@ footer{
 #acordeon{
     margin-top: 20px;
 }
+#reloj{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    border: 5px dashed #333;
+    padding: 30px;
+    margin: 0px auto;
+    width: 50%;
+    font-family: Helvetica,Arial;
+}
